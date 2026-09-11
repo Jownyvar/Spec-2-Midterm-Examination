@@ -1,0 +1,57 @@
+{
+  "curator": {
+    "name": "Curator Profile Name Here",
+    "role": "Film & Book Enthusiast",
+    "yearsCurating": 5,
+    "location": "Plaridel, Bulacan",
+    "bio": "Passionate about storytelling across mediums, curating hidden gems in film and literature.",
+    "email": "curator@example.com"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "title": "The Silent Horizon",
+      "type": "Movie",
+      "genre": "Sci-Fi",
+      "description": "A crew stranded in deep space must decide who survives the journey home.",
+      "release": { "year": 2021, "studio": "Horizon Films" },
+      "cast": ["Ana Reyes", "Miguel Santos", "Liza Cruz"]
+    },
+    {
+      "id": 2,
+      "title": "Echoes of Manila",
+      "type": "Book",
+      "genre": "Historical Fiction",
+      "description": "A multigenerational story set against the backdrop of the Philippine revolution.",
+      "release": { "year": 2018, "publisher": "Anvil Press" },
+      "cast": ["Isabel Marquez (Author)"]
+    },
+    {
+      "id": 3,
+      "title": "Neon Undercity",
+      "type": "Movie",
+      "genre": "Action",
+      "description": "A detective hunts a hacker collective in a dystopian futuristic city.",
+      "release": { "year": 2023, "studio": "Undercity Studios" },
+      "cast": ["Carlo Ibanez", "Trisha Domingo"]
+    },
+    {
+      "id": 4,
+      "title": "Letters to the Sea",
+      "type": "Book",
+      "genre": "Romance",
+      "description": "A love story told through letters exchanged between two islands.",
+      "release": { "year": 2020, "publisher": "Islet Books" },
+      "cast": ["Josefina Ramos (Author)"]
+    },
+    {
+      "id": 5,
+      "title": "Barangay Chronicles",
+      "type": "Movie",
+      "genre": "Drama",
+      "description": "An intimate portrait of daily life and resilience in a small Filipino community.",
+      "release": { "year": 2022, "studio": "Chronicle Pictures" },
+      "cast": ["Nora Villamor", "Ramon Cruz", "Ella Bautista"]
+    }
+  ]
+}
