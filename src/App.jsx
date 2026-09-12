@@ -4,6 +4,7 @@ import MainLayout from "./laouts/MainLayout";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
+import Movie from "./pages/Movie";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          {/* <Route path="/Movies/:id" element={<Movie />} /> */}
+          <Route path="/Movie/:id" element={<Movie />} />
           <Route path="*" element={<Error/>} />
         </Route>
       </Routes>
