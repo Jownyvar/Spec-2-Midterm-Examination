@@ -1,0 +1,29 @@
+nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: 	black;
+    padding: 20px;
+    color: #831010;
+    font-weight: bold;
+}
+
+
+nav > .logo {
+    font-size: 22px;
+}
+nav > .nav-links{
+    display:flex;
+    gap:15px;
+    font-size: 18px;
+    
+}
+
+nav > .nav-links > a{
+    text-decoration: none;
+    color: black;
+    background-color: #831010;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
