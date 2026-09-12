@@ -1,29 +1,44 @@
-nav{
-    display:flex;
+nav {
+    display: flex;
     justify-content: space-between;
-    background-color: 	black;
-    padding: 20px;
-    color: #831010;
-    font-weight: bold;
+    align-items: center;
+ background: #0f0f0f;
+background: linear-gradient(90deg,rgba(15, 15, 15, 1) 0%, rgba(89, 30, 37, 1) 80%, rgba(130, 44, 46, 1) 100%, rgba(237, 221, 83, 1) 100%);
+  display: flex;
+    padding: 16px 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #e50914;
 }
-
 
 nav > .logo {
-    font-size: 22px;
-}
-nav > .nav-links{
-    display:flex;
-    gap:15px;
-    font-size: 18px;
-    
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #e50914;
+    text-transform: uppercase;
+        text-decoration: none;
 }
 
-nav > .nav-links > a{
+nav > .nav-links {
+    display: flex;
+    gap: 24px;
+    font-size: 16px;
+}
+
+nav > .nav-links > a {
     text-decoration: none;
-    color: black;
-    background-color: #831010;
-    border-radius: 15px;
-    padding: 5px;
+    color: #e5e5e5;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition:  0.3s ease;
+    font-weight: 600;
+    border: 2px solid transparent;
+}
+
+nav > .nav-links > a:hover {
+    color: #ffffff;
+    background-color: rgba(229, 9, 20, 0.1);
+    border-color: #e50914;
 }
 
 

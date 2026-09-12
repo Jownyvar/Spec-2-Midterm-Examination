@@ -1,0 +1,57 @@
+.about-info {
+  color: #e5e5e5;
+  background:  rgb(54, 50, 50);
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: calc(100vh - 70px);
+  gap: 24px;
+  border-radius: 8px;
+  margin: 32px;
+  border-left: 4px solid #e50914;
+}
+
+.about-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e50914;
+  margin-bottom: 16px;
+}
+
+.about-info p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cccccc;
+  margin: 0;
+}
+
+.name {
+  margin-bottom: 24px;
+}
+
+.role {
+  font-size: 18px;
+  color: #e5e5e5;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.info {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 8px;
+}
+
+.bio {
+  font-size: 15px;
+  color: #d0d0d0;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.email {
+  font-size: 14px;
+  color: #a0a0a0;
+}

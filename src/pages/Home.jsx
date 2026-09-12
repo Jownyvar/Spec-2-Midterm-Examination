@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import "./Home.css";
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -24,17 +25,23 @@ const Home = () => {
         <title>Netflix.budget Edition</title>
       </Helmet>
       <div className="HomePage">
-        Home
         {items.map((item) => {
           return (
             <>
               <div className="ewan" key={item.id}>
-                <p>{item.title}</p>
-                <Link to={`/Movie/${item.id}`} state={{ item }}>
-                  View Movie Details
-                </Link>
+                <p className="title">{item.title}</p>
+                <p className="genre">{item.genre}</p>
+
+                <div className="button">
+                  <Link
+                    className="link"
+                    to={`/Movie/${item.id}`}
+                    state={{ item }}
+                  >
+                    View Movie Details
+                  </Link>
+                </div>
               </div>
-              ;
             </>
           );
         })}

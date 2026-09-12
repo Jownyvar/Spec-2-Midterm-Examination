@@ -1,0 +1,46 @@
+.card {
+  background:  rgb(54, 50, 50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  height: 500px;
+  color: #e5e5e5;
+  border-radius: 8px;
+  border: 1px solid #333333;
+  margin: 32px;
+  gap: 24px;
+}
+
+.card h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #e50914;
+}
+
+.card p {
+  font-size: 16px;
+  color: #cccccc;
+  text-align: center;
+  max-width: 600px;
+}
+
+.go-back{
+  top: 90px;
+  left: 24px;
+  background: none;
+  border-color: #e50914;
+  color: white;
+  margin-top: 20px;
+  margin-left: 32px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.go-back:hover {
+  border-color: #e50914;
+   box-shadow: 0 8px 16px rgba(229, 9, 20, 0.2);
+  color: white;
+}

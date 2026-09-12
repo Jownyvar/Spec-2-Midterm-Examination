@@ -8,9 +8,9 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <div className="logo">
+        <NavLink to="/"className="logo">
             NetFlix | Budget Edition
-        </div>
+        </NavLink>
         <div className="nav-links">
           <NavLink
             to="/"
