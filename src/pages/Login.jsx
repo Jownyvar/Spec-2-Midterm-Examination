@@ -1,28 +1,31 @@
 import React from "react";
 import { useState } from "react";
 import { logIn, googleSignIn } from "../lib/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
-
+  const navigate = useNavigate();
   function handleOnChange(e) {
     const { name, value } = e.target;
     setForm({
-        ...form,
+      ...form,
       [name]: value,
     });
   }
 
-  async function handleSubmit(e) {
+  async function handleLogin(e) {
     e.preventDefault();
-    const response = await logIn(form.email, form.password)
+    const response = await logIn(form.email, form.password);
+    navigate("/");
     console.log(response);
   }
 
   return (
     <div>
       <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleLogin}>
         <input
           type="text"
           placeholder="email"
@@ -31,13 +34,13 @@ const Login = () => {
           onChange={handleOnChange}
         />
         <input
-          type="text"
+          type="password"
           placeholder="password"
           value={form.password}
           name="password"
           onChange={handleOnChange}
         />
-        <button>Register</button>
+        <button onClick={handleLogin}>Login</button>
       </form>
     </div>
   );

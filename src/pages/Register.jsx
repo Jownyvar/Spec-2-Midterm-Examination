@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { register, googleSignIn } from "../lib/firebase";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [form, setForm] = useState({ email: "", password: "" });
-
+  const navigate = useNavigate();
   function handleOnChange(e) {
     const { name, value } = e.target;
     setForm({
@@ -14,8 +15,12 @@ const Register = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await register(form.email, form.password);
-    console.log(response);
+    try {
+      const response = await register(form.email, form.password);
+      navigate("/Login");
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

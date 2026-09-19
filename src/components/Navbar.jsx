@@ -19,7 +19,7 @@ const Navbar = () => {
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
-        navigate("/");
+        navigate("/Register");
       }
     });
     return unsub;
