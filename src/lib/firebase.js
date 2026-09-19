@@ -26,9 +26,12 @@ export const auth = getAuth(app);
 export const register = async (email, password) => {
   try {
     const response = await createUserWithEmailAndPassword(auth, email, password)
+    if (!response) {
+      console.log("hahhahaa may error ka dito")
+    }
     return response;
   } catch (error) {
-    throw error;
+    console.log(error)
   }
 }
 
@@ -46,7 +49,7 @@ export const logIn = async (email, password) => {
     const response = await signInWithEmailAndPassword(auth, email, password);
     return response;
   } catch (error) {
-    throw error;
+    console.log(error)
   }
 }
 

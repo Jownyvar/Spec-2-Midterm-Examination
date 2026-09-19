@@ -18,7 +18,9 @@ const Login = () => {
   async function handleLogin(e) {
     e.preventDefault();
     const response = await logIn(form.email, form.password);
-    navigate("/");
+    if (response) {
+      navigate("/");
+    }
     console.log(response);
   }
 

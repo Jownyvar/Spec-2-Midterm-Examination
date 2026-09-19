@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { register, googleSignIn } from "../lib/firebase";
 import { useNavigate } from "react-router-dom";
+import "./Register.css";
+
 const Register = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const navigate = useNavigate();
@@ -24,27 +26,30 @@ const Register = () => {
   }
 
   return (
-    <div>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="email"
-          value={form.email}
-          name="email"
-          onChange={handleOnChange}
-        />
-        <input
-          type="text"
-          placeholder="password"
-          value={form.password}
-          name="password"
-          onChange={handleOnChange}
-        />
+    <>
+      <div className="form-layout">
+        <h1>Register</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="email"
+            value={form.email}
+            name="email"
+            onChange={handleOnChange}
+          />
+          <input
+            type="text"
+            placeholder="password"
+            value={form.password}
+            name="password"
+            onChange={handleOnChange}
+          />
         <button>Register</button>
-      </form>
-      <button onClick={googleSignIn}>Google</button>
-    </div>
+        </form>
+        <p>Or sign up with</p>
+        <button onClick={googleSignIn}>Google</button>
+      </div>
+    </>
   );
 };
 
