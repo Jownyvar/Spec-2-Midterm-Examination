@@ -5,16 +5,18 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Movie from "./pages/Movie";
+import Register from "./pages/Register";
 
 function App() {
   return (
     <>
       <Routes>
         <Route element={<MainLayout />}>
+          <Route path="/Register" element={<Register />}></Route>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Movie/:id" element={<Movie />} />
-          <Route path="*" element={<Error/>} />
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </>
