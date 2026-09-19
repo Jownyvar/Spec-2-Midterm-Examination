@@ -43,7 +43,7 @@ const Navbar = () => {
           >
             About
           </NavLink>
-          <button onClick={handleLogOut}>Logout</button>
+          <button onClick={handleLogOut} className="logout-btn">Logout</button>
         </div>
       </nav>
     </>

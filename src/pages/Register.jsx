@@ -38,16 +38,16 @@ const Register = () => {
             onChange={handleOnChange}
           />
           <input
-            type="text"
+            type="password"
             placeholder="password"
             value={form.password}
             name="password"
             onChange={handleOnChange}
           />
-        <button>Register</button>
+          <button>Register</button>
+          <p>Or sign up with</p>
+          <button onClick={googleSignIn}>Google</button>
         </form>
-        <p>Or sign up with</p>
-        <button onClick={googleSignIn}>Google</button>
       </div>
     </>
   );

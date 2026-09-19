@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { logIn, googleSignIn } from "../lib/firebase";
-import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -24,27 +24,38 @@ const Login = () => {
     console.log(response);
   }
 
+  async function handleGoogleLogIn(e) {
+    e.preventDefault();
+    const response = await googleSignIn();
+    if (response) {
+      navigate("/");
+    }
+    console.log(response);
+  }
   return (
-    <div>
-      <h1>Register</h1>
-      <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          placeholder="email"
-          value={form.email}
-          name="email"
-          onChange={handleOnChange}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          value={form.password}
-          name="password"
-          onChange={handleOnChange}
-        />
-        <button onClick={handleLogin}>Login</button>
-      </form>
-    </div>
+    <>
+      <div className="form-layout">
+        <h1>Log In</h1>
+        <form onSubmit={handleLogin}>
+          <input
+            type="text"
+            placeholder="email"
+            value={form.email}
+            name="email"
+            onChange={handleOnChange}
+          />
+          <input
+            type="password"
+            placeholder="password"
+            value={form.password}
+            name="password"
+            onChange={handleOnChange}
+          />
+          <button onClick={handleLogin}>Login</button>
+          <button onClick={handleGoogleLogIn}>Google</button>
+        </form>
+      </div>
+    </>
   );
 };
 
