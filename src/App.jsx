@@ -11,8 +11,8 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/Register" element={<Register />} />
         <Route element={<MainLayout />}>
-          <Route path="/Register" element={<Register />}></Route>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Movie/:id" element={<Movie />} />

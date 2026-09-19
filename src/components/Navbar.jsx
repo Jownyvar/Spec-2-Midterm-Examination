@@ -1,10 +1,29 @@
 import { NavLink } from "react-router-dom";
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
+import { logout, auth } from "../lib/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+
 const activeLink = { fontWeight: "bold", textDecoration: "underline" };
 const inActiveLink = { fontWeight: "normal" };
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  async function handleLogOut() {
+    const response = await logout();
+    console.log(response);
+    navigate("/");
+  }
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (currentUser) => {
+      if (!currentUser) {
+        navigate("/");
+      }
+    });
+    return unsub;
+  }, []);
   return (
     <>
       <nav>
@@ -24,7 +43,7 @@ const Navbar = () => {
           >
             About
           </NavLink>
-          <button>Logout</button>
+          <button onClick={handleLogOut}>Logout</button>
         </div>
       </nav>
     </>

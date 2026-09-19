@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { login, googleSignIn } from "../lib/firebase";
+
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
 
@@ -11,9 +13,10 @@ const Login = () => {
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(form);
+    const response = await login(form.email, form.password)
+    console.log(response);
   }
 
   return (

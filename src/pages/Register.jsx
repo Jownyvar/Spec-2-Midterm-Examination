@@ -1,19 +1,21 @@
 import React from "react";
 import { useState } from "react";
+import { register, googleSignIn } from "../lib/firebase";
 const Register = () => {
   const [form, setForm] = useState({ email: "", password: "" });
 
   function handleOnChange(e) {
     const { name, value } = e.target;
     setForm({
-      //   ...form,
+      ...form,
       [name]: value,
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(form);
+    const response = await register(form.email, form.password);
+    console.log(response);
   }
 
   return (
@@ -36,6 +38,7 @@ const Register = () => {
         />
         <button>Register</button>
       </form>
+      <button onClick={googleSignIn}>Google</button>
     </div>
   );
 };
