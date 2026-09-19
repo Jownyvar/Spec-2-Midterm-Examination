@@ -46,8 +46,7 @@ export const googleSignIn = async () => {
 
 export const logIn = async (email, password) => {
   try {
-
-    const resopnse = await signInWithEmailAndPassword(auth, email, password);
+    const response = await signInWithEmailAndPassword(auth, email, password);
     return response;
   } catch (error) {
     console.log(error)

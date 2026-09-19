@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { login, googleSignIn } from "../lib/firebase";
+import { logIn, googleSignIn } from "../lib/firebase";
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -8,14 +8,14 @@ const Login = () => {
   function handleOnChange(e) {
     const { name, value } = e.target;
     setForm({
-      //   ...form,
+        ...form,
       [name]: value,
     });
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await login(form.email, form.password)
+    const response = await logIn(form.email, form.password)
     console.log(response);
   }
 

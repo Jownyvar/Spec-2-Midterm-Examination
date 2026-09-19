@@ -6,12 +6,14 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Movie from "./pages/Movie";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/Register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
