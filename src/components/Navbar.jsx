@@ -23,7 +23,7 @@ const Navbar = () => {
       }
     });
     return unsub;
-  }, []);
+  },);
   return (
     <>
       <nav>
