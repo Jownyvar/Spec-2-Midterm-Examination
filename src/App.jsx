@@ -12,9 +12,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Login" element={<Login />} />
         <Route element={<MainLayout />}>
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route path="/Movie/:id" element={<Movie />} />
